@@ -2,6 +2,7 @@
 """float"""
 
 
+import math
 def floor(n: float) -> int:
     """float"""
-    return n
+    return math.floor(n)
