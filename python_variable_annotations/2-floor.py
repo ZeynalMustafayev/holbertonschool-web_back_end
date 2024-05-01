@@ -3,6 +3,8 @@
 
 
 import math
+
+
 def floor(n: float) -> int:
     """float"""
     return math.floor(n)
