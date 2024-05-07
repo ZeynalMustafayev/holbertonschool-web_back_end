@@ -5,4 +5,4 @@
 def list_all(mongo_collection):
     if mongo_collection == "":
         return []
-    return mongo_collection.find()
+    return list(mongo_collection.find())
