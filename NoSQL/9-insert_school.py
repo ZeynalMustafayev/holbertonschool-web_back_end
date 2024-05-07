@@ -3,4 +3,5 @@
 
 
 def insert_school(mongo_collection, **kwargs):
+    """insert_school"""
     return mongo_collection.insert(kwargs)
