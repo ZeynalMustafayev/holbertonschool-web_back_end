@@ -10,6 +10,7 @@ if __name__ == "__main__":
 
     doc_count = collection.estimated_document_count()
     print("{} logs".format(doc_count))
+    print("Methods:")
 
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     for method in methods:
