@@ -3,4 +3,5 @@
 
 
 def index_range(page, page_size):
+    """index_range"""
     return page, page_size
