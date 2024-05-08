@@ -4,4 +4,4 @@
 
 def index_range(page, page_size):
     """index_range"""
-    return page - 1, page_size
+    return (page - 1) * page_size, page_size * page
