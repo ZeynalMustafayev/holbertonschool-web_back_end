@@ -48,9 +48,7 @@ class Server:
                 i += 1
                 next_index += 1
             pages.append(self.indexed_dataset()[i])
-        return {
-            "index": index,
-            "next_index": next_index,
-            "page_size": page_size,
-            "data": pages,
-        }
+        return {"index": index,
+                "data": pages,
+                "page_size": page_size,
+                "next_index": next_index}
