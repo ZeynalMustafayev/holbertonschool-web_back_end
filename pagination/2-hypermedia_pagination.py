@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Hypermedia pagination"""
 import csv
-from typing import List
+from typing import List, Dict
 
 
 index_range = __import__('0-simple_helper_function').index_range
@@ -33,7 +33,7 @@ class Server:
         start, end = index_range(page, page_size)
         return self.dataset()[start:end]
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> List[List]:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[int, List]:
         """get hypermedia from dataset"""
         data = self.get_page(page, page_size)
         total_items = len(self.dataset())
@@ -41,7 +41,7 @@ class Server:
         return {
             "page_size": len(data),
             "page": page,
-            "data": page_size,
+            "data": data,
             "next_page": page + 1 if page < total_pages else None,
             "prev_page": page - 1 if page > 1 else None,
             "total_pages": total_pages,
