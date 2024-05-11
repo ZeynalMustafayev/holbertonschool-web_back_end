@@ -1,8 +1,7 @@
 /* eslint-disable */
 export default function createEmployeesObject(departmentName, employees) {
     const department = {
-        departmentName,
-        employees
+        departmentName : employees
     }
     return department
 }
