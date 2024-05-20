@@ -1,5 +1,5 @@
-function getResponseFromAPI(success) {
-    return new Promise((resolve, reject) => {
+export default function getResponseFromAPI(success) {
+    let promise =  new Promise((resolve, reject) => {
        if (success) {
         resolve({status:200, body:"Success"});
        } 
@@ -7,4 +7,5 @@ function getResponseFromAPI(success) {
         reject(new Error("The fake API is not working currently"));
        }
     });
+    return promise
 }
